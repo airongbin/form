@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>form test</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
+	<link rel="stylesheet" type="text/css" href="css/form.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="span2">
+				<div class="ui-drag sider-bar">
+					<ul>
+						<li>输入框</li>
+						<li>选择列表</li>
+						<li>复选框</li>
+						<li>文本上传</li>
+						<li>多选列表</li>
+						<li>文本区域</li>
+						<li>按钮区域(只能一次)</li>
+					</ul>
+				</div>
+				<button class="btn btn-primary outHTML" type="submit">生成HTML</button>
+			</div>
+
+			<div class="span9 offset1">
+				<div class="content">
+					    <form class="form-horizontal">
+					    	<ul class="formList">
+					    		<li>
+					    			<div class="control-group">
+								   	 	<label class="control-label" for="input01">输入框</label>
+								    	<div class="controls">
+							              <input type="text" id="input01" class="input-xlarge">
+							            </div>
+							        </div>
+					    		</li>
+					    	
+							    <li>
+						    		<div class="control-group">
+								   	 	<label class="control-label" for="input02">输入框</label>
+								    	<div class="controls">
+							              <input type="text" id="input02" class="input-xlarge">
+							            </div>
+						            </div>
+					    		</li>
+					    		<li>
+					    			<div class="control-group">
+							            <label for="select01" class="control-label">选择列表</label>
+							            <div class="controls">
+							              <select id="select01">
+							                <option>something</option>
+							                <option>2</option>
+							                <option>3</option>
+							                <option>4</option>
+							                <option>5</option>
+							              </select>
+							            </div>
+							        </div>
+					    		</li>
+					    		<li>
+					    			<div class="control-group">
+							            <label for="optionsCheckbox" class="control-label">复选框</label>
+							            <div class="controls">
+							              <label class="checkbox">
+							                <input type="checkbox" value="option1" id="optionsCheckbox">
+							                选我不?
+							              </label>
+							              <label class="checkbox">
+							                <input type="checkbox" value="option1" id="optionsCheckbox">
+							                还是选他吧?
+							              </label>
+							            </div>
+							        </div>
+					    		</li>
+					    		<li>
+					    			<div class="control-group">
+							            <label for="fileInput" class="control-label">文件上传</label>
+							            <div class="controls">
+							              <input type="file" id="fileInput" class="input-file">
+							            </div>
+							        </div>
+					    		</li>
+					    		<li>
+					    			<div class="control-group">
+							            <label for="multiSelect" class="control-label">多选列表</label>
+							            <div class="controls">
+							              <select id="multiSelect" multiple="multiple">
+							                <option>1</option>
+							                <option>2</option>
+							                <option>3</option>
+							                <option>4</option>
+							                <option>5</option>
+							              </select>
+							            </div>
+							        </div>
+					    		</li>
+					    		<li>
+					    			<div class="control-group">
+							            <label for="textarea" class="control-label">文本区域</label>
+							            <div class="controls">
+							              <textarea rows="3" id="textarea" class="input-xlarge"></textarea>
+							            </div>
+							        </div>
+					    		</li>
+					    		<li>
+					    			<div class="form-actions">
+							            <button class="btn btn-primary" type="submit">保存</button>
+							            <button class="btn">取消</button>
+							        </div>
+					    		</li>
+						    </ul>
+					    </form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$('.outHTML').click(function(e){
+		var html = [];
+		$('.formList li').each(function(){
+			html.push($(this).html());
+		});
+		alert(html.join(''));
+	});
+</script>
+</html>

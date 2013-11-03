@@ -1,0 +1,6 @@
+.container{margin-top:10px;}
+.sider-bar li{list-style-type: none;background: #EEE;margin-bottom: 5px;padding:0 10px;border-radius: 3px;height: 28px;line-height: 28px;}
+.outHTML{margin-left: 25px;}
+.content{border:1px solid #ddd;min-height: 600px;padding:10px 0;}
+.content .formList{position: relative;}
+.content li{list-style-type: none;margin-bottom: 3px;}
